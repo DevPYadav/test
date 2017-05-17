@@ -14,15 +14,15 @@ my_project/.git/config
 
 * Initializing a new repository locally
 
-*$ git init*
+  *$ git init*
 
 * Whether git is installed or not
 
-*$ which git*
+  *$ which git*
 
 * Which version of git is installed
 
-*$ git --version*
+  *$ git --version*
 
 # Basic Commands:
 
