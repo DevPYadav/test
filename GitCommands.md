@@ -52,7 +52,7 @@ my_project/.git/config
 
 * Commit the file
 
-  *$ git commit -m "<comment>"*
+  *$ git commit -m <comments>*
 
 ## Viewing the git log
 
@@ -125,3 +125,45 @@ my_project/.git/config
   *export PS1='$(__git_ps1 "(%s)") > '*
 
   *export PS1='\W$(__git_ps1 "(%s)") > '*
+
+# Working with the Remote Server
+
+## Git Remote
+
+Remote locations are generally a build server, a team members machine or a centralised store such as Github.com. Remotes are added using the git remote command with a friendly name and the remote location, typically a HTTPS URL or a SSH connection for example https://github.com/OcelotUproar/ocelite.git or git@github.com:/OcelotUproar/ocelite.git.
+
+The friendly name allows you to refer to the location in other commands. Your local repository can reference multiple different remote repositories depending on your scenario.
+
+  *$ git remote add origin /s/remote-project/1*
+
+Here the friendly name of the remote location is "origin" and "/s/remote-project/1" is the path of the remote location
+
+## Git Push
+
+When you're ready to share your commits you need to push them to a remote repository via git push. A typical Git workflow would be to perform multiple small commits as you complete a task and push to a remote at relevant points, such as when the task is complete, to ensure synchronization of the code within the team.
+
+The git push command is followed by two parameters. The first parameter is the friendly name of the remote repository we defined in the first step. The second parameter is the name of the branch. By default all git repositories have a master branch where the code is worked on.
+
+  *$ git push origin master*
+
+If you are on a different branch, say "development" and want to push that branch to GitHub then use the below command
+
+  *$ git push origin development*
+
+## Git Pull
+
+Where git push allows you to push your changes to a remote repository, git pull works in the reverse fashion. git pull allows you to sync changes from a remote repository into your local version.
+
+The changes from the remote repository are automatically merge into the branch you're currently working on.
+
+  *$ git pull origin master*
+
+## Git Fetch
+
+The command git pull is a combination of two different commands, git fetch and git merge. Fetch downloads the changes from the remote repository into a separate branch named remotes/<remote-name>/<remote-branch-name>. The branch can be accessed using git checkout.
+
+Using git fetch is a great way to review the changes without affecting your current branch. The naming format of branches is flexible enough that you can have multiple remotes and branches with the same name and easily switch between them.
+
+The following command will merge the fetched changes into master.
+
+  *$ git merge remotes/<remote-name>/<remote-branch-name> master*
