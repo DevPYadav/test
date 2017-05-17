@@ -68,6 +68,20 @@ my_project/.git/config
 
   *$ git log --grep="Init"*
 
+* Show the last 2 commits and the differences
+  *$ git log -p -2*
+  -2 shows the Last 2 changes
+  -p shows the difference between each commit
+
+  *$ git log --stat*
+  Shows details of those changes
+
+  *$ git log --pretty=oneline*
+  Gives the reference for each commit and the commit text
+
+  $* git log --pretty=format:"%h: %an, %ae, %cn, %cd, -%s" --graph*
+  Shows the short hexa decimal code, author name, author email, common name of the person, common date, comments that were added while checking in and a visual representation
+
 ## Checking out a file from local repository to the working directory
 
   *$ git checkout -- secondary_file.txt*
@@ -167,3 +181,53 @@ Using git fetch is a great way to review the changes without affecting your curr
 The following command will merge the fetched changes into master.
 
   *$ git merge remotes/<remote-name>/<remote-branch-name> master*
+
+## Git Reset
+
+If you're in the middle of a commit and have added files to the staging area but then changed your mind then you'll need to use the git reset command. git reset will move files back from the staging area to the working directory. If you want to reset all files then use a . to indicate current directory, otherwise list the files separated by spaces.
+
+  *$ git reset HEAD .*
+
+## Git Reset Hard
+
+A git reset --hard will combine both git reset and git checkout in a single command. The result will be the files removed from the staging area and the working directory is taken back to the state of the last commit.
+
+  *$ git reset --hard HEAD*
+
+## Git Revert
+
+If you have already committed files but realized you made a mistake then the command git revert allows you to undo the commits. The command will create a new commit which has the inverse affect of the commit being reverted.
+
+  *$ git revert HEAD --no-edit*
+
+## Git Merge
+
+The git fetch command downloads changes into a separate branch which can be checked out and merge. During a merge Git will attempt to automatically combine the commits.
+
+When no conflicts exist then the merge will be 'fast-forwarded' and you won't have to do anything. If a conflict does exist then you will retrieve an error and the repository will be in a merging state.
+
+### Viewing Conflict -
+
+When a conflict occurs the changes from both the local and remote will appear in the same file in the unix diff format. This is the same format used by git diff.
+
+To read the format, the local changes will appear at the top between <<<<<<< HEAD and ======= with the remote changes being underneath between ======= and >>>>>>> remotes/origin/master.
+
+To resolve the conflict the files need to be edited to match our desired end state.
+
+### Resolving Conflict  -
+
+The simplest way to fix a conflict is to pick either the local or remote version using git checkout --ours staging.txt or git checkout --theirs staging.txt. If you need to have more control then you can manually edit the file(s) like normal.
+
+Once the files are in the state desired, either manually or using git checkout, then you need to stage and commit the changes. When committing a default commit message will be created with details of the merge and which files conflicted.
+
+  *$ git merge development --no-ff*
+
+The above command merges the development branch into the master with all the previous commits included.
+
+# Connecting to Github
+
+* SSH key generation to connect to github
+  *$ ssh-keygen*
+
+* Cloning a directory from github
+  *$ git clone git@github.com:DevPYadav/test.git*
