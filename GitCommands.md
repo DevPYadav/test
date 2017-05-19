@@ -229,5 +229,10 @@ The above command merges the development branch into the master with all the pre
 * SSH key generation to connect to github
   *$ ssh-keygen*
 
+* Point to a remote repository
+ *$ git remote add origin git@bitbucket.org:devpyadav/bitbuckettest.git*
+ *$ git remote add origin git@github.com:devpyadav/test.git
+
+
 * Cloning a directory from github
   *$ git clone git@github.com:DevPYadav/test.git*
