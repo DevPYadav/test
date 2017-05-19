@@ -140,6 +140,68 @@ my_project/.git/config
 
   *export PS1='\W$(__git_ps1 "(%s)") > '*
 
+## Example for creating branches 
+
+Multiple project development within a single product. 
+
+ *$git status*
+On branch master assumed as prod
+
+ *$git branch -a*
+* master
+[ sometimes remote or origin master ] - just master
+
+{ git uses snapshots to do a snapshot of the system at each individual task } 
+
+ *$git checkout -b development*
+
+ *$git status*
+ master
+ * dev
+
+ *$git branch -a*
+ * development
+ master 
+
+ *$git checkout master*
+ Switched to branch master
+
+ *$git status*
+ # On branch master
+ [ nothing to commit ]
+
+ *$git branch -a*
+
+ *$echo 'This is Master Only' > MASTERBRANCH.txt*
+ *$git status*
+ # On branch master
+
+ *$git add MASTERBRANCH.txt*
+
+ *$git commit MASTERBRANCH.txt -m 'largeassedmasterbranch'*
+
+ *$git status*
+ # On branch master nothing to commit
+
+ *$git checkout development*
+ => no MASTERBRANCH.txt
+
+ development was branched before the file was added -> 
+
+ *$echo 'Development Branch' > DEVELOPMENT.TXT*
+
+ *$git add DEVELOPMENT.TXT*
+ *$git commit DEVELOPMENT.TXT -m 'Dev'*
+
+ *$git status*
+ # On branch development
+ DEVELOPMENT.txt 
+
+ *$git checkout master*
+
+ *$ls -lhtar
+ = MASTERBRANCH.txt 
+
 # Working with the Remote Server
 
 ## Git Remote
