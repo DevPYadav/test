@@ -304,7 +304,7 @@ The above command merges the development branch into the master with all the pre
 
 2. To see the beginning of the merge conflict in your file, search the file for the conflict marker <<<<<<<. 
 
-When you open the file in your text editor, you'll see the changes from the HEAD or base branch after the line <<<<<<< HEAD. 
+When you open the file in your text editor, you willll see the changes from the HEAD or base branch after the line <<<<<<< HEAD. 
 
 Next, you'll see =======, which divides your changes from the changes in the other branch, followed by >>>>>>> BRANCH-NAME. 
 
@@ -323,7 +323,7 @@ If you have questions, please open an issue or ask in our IRC channel if it's mo
 
 4. Add or stage your changes.
 
-$ git add .
+*$ git add .*
 
 5. Commit your changes with a comment
-$ git commit -m "Resolved merge conflict by incorporating both suggestions."
+*$ git commit -m "Resolved merge conflict by incorporating both suggestions."*
