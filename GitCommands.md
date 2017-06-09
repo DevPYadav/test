@@ -295,6 +295,35 @@ The above command merges the development branch into the master with all the pre
  *$ git remote add origin git@bitbucket.org:devpyadav/bitbuckettest.git*
  *$ git remote add origin git@github.com:devpyadav/test.git
 
-
 * Cloning a directory from github
   *$ git clone git@github.com:DevPYadav/test.git*
+  
+# Resolving a merge conflict using the command line
+
+1. Open your favorite text editor, such as Atom, and navigate to the file that has merge conflicts.
+
+2. To see the beginning of the merge conflict in your file, search the file for the conflict marker <<<<<<<. 
+
+When you open the file in your text editor, you'll see the changes from the HEAD or base branch after the line <<<<<<< HEAD. 
+
+Next, you'll see =======, which divides your changes from the changes in the other branch, followed by >>>>>>> BRANCH-NAME. 
+
+In this example, one person wrote "open an issue" in the base or HEAD branch and another person wrote "ask your question in IRC" in the compare branch or branch-a.
+
+If you have questions, please
+<<<<<<< HEAD
+open an issue
+=======
+ask your question in IRC.
+>>>>>>> branch-a
+
+3. Decide if you want to keep only your branch's changes, keep only the other branch's changes, or make a brand new change, which may incorporate changes from both branches. Delete the conflict markers <<<<<<<, =======, >>>>>>> and make the changes you want in the final merge. In this example, both changes are incorporated into the final merge:
+
+If you have questions, please open an issue or ask in our IRC channel if it's mo
+
+4. Add or stage your changes.
+
+$ git add .
+
+5. Commit your changes with a comment
+$ git commit -m "Resolved merge conflict by incorporating both suggestions."
