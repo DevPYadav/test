@@ -329,3 +329,18 @@ If you have questions, please open an issue or ask in our IRC channel if it's mo
 5. Commit your changes with a comment
 
 *$ git commit -m "Resolved merge conflict by incorporating both suggestions."*
+
+# How to revert a merge commit that's already pushed to remote branch?
+
+When you view a merge commit in the output of git log, you will see its parents listed on the line that begins with Merge:
+
+commit 8f937c683929b08379097828c8a04350b9b8e183
+Merge: 8989ee0 7c6b236
+Author: Ben James <ben@example.com>
+Date:   Wed Aug 17 22:49:41 2011 +0100
+
+In this situation, git revert 8f937c6 -m 1 will get you the tree as it was in 8989ee0, and git revert -m 2 will reinstate the tree as it was in 7c6b236.
+
+*$ git revert -m 1 <commit-hash>*
+*$ git commit -m "Reverting the last commit which messed the repo."*
+*$ git push -u origin master*
