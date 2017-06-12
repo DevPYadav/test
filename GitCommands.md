@@ -342,5 +342,7 @@ Date:   Wed Aug 17 22:49:41 2011 +0100
 In this situation, git revert 8f937c6 -m 1 will get you the tree as it was in 8989ee0, and git revert -m 2 will reinstate the tree as it was in 7c6b236.
 
 *$ git revert -m 1 <commit-hash>*
+
 *$ git commit -m "Reverting the last commit which messed the repo."*
+
 *$ git push -u origin master*
