@@ -1,0 +1,55 @@
+# Basic Commands:
+
+* i	Insert at cursor (goes into insert mode)
+* a	Write after cursor (goes into insert mode)
+* A	Write at the end of line (goes into insert mode)
+* ESC	Terminate insert mode
+* u	Undo last change
+* U	Undo all changes to the entire line
+* o	Open a new line (goes into insert mode)
+## dd
+* 3dd	Delete line
+* Delete 3 lines.
+* D	Delete contents of line after the cursor
+* C	Delete contents of a line after the cursor and insert new text. Press ESC key to end insertion.
+
+## Delete, Replace etc.
+* 4dw	Delete word
+* Delete 4 words
+* cw	Change word
+* x	Delete character at the cursor
+* X : Deletes the character before the cursor location.
+* Dw : Deletes from the current cursor location to the next word.
+* d^ : Deletes from current cursor position to the beginning of the line.
+* d$ : Deletes from current cursor position to the end of the line.
+* Dd : Deletes the line the cursor is on.
+* r	Replace character
+* R	Overwrite characters from cursor onward
+* s	Substitute one character under cursor continue to insert
+* S	Substitute entire line and begin to insert at the beginning of the line
+* ~	Change case of individual character
+
+## Copy and Paste commands
+* Yy : Copies the current line.
+* 9yy : Yank current line and 9 lines below.
+* p : Puts the copied text after the cursor.
+* P : Puts the yanked text before the cursor.
+
+# Moving within a file
+* k	Move cursor up
+* j	Move cursor down
+* h	Move cursor left
+* l	Move cursor right
+* 0 or | : Positions cursor at beginning of line.
+* $ : Positions cursor at end of line.
+* W : Positions cursor to the next word.
+* B : Positions cursor to previous word.
+* ( : Positions cursor to beginning of current sentence.
+* ) : Positions cursor to beginning of next sentence.
+* H : Move to top of screen.
+* nH : Moves to nth line from the top of the screen.
+* M : Move to middle of screen.
+* L : Move to bottom of screen.
+* nL : Moves to nth line from the bottom of the screen.
+* colon along with x : Colon followed by a number would position the cursor on line number represented by x.
+
