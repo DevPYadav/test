@@ -238,12 +238,37 @@ Slash\Character
 
 * List functions
 1. Utilizing list as a queue 
->>> list_name.pop(0) (returns the first item in the list and removes that item from the list)
+'>>> list_name.pop(0) (returns the first item in the list and removes that item from the list)
 2. Creating a list
->>> list_name = [item1, item2, item3, item4]
+'>>> list_name = [item1, item2, item3, item4]
 3. Adding an item to a list at a specified location
->>> list_name.insert(0,1) (inserts value of 1 to first position (position zero) in the list)
-4. 
+'>>> list_name.insert(0,1) (inserts value of 1 to first position (position zero) in the list)
+4. Returning alternating values from a list in reverse order?
+>>> list_name[5:0:-2] (returns every other value starting from sixth value and iterating backwards) 
+5. Skip values while slicing a list
+>>> example: list_name[0:5:2] returns every other list item from 0-5
+6. Utilizing a list as a stack
+>>> list_name.pop( ) (returns the last item from the list and removes that item from the list)
+7. Add items to the end of a list
+>>> list_name.append(item)
+8. Assigning values to a list
+>>> list_name[1] = a (changes 2nd value to 'a')
+>>> list_name[0:3] = [1, 2, 3, 4] (changes 1st - 4th values to 1, 2, 3, 4)
 
+* Creating a python virtual environment
+pipenv --python python3.7
+Creating a virtualenv for this project…
+Pipfile: /home/cloud_user/hr/Pipfile
+Using /usr/local/bin/python3.7 (3.7.2) to create virtualenv…
+⠇ Creating virtual environment...Already using interpreter /usr/local/bin/python3.7
+Using base prefix '/usr/local'
+New python executable in /home/cloud_user/.local/share/virtualenvs/hr-3BGsCzQa/bin/python3.7
+Also creating executable in /home/cloud_user/.local/share/virtualenvs/hr-3BGsCzQa/bin/python
+Installing setuptools, pip, wheel...
+done.
+
+✔ Successfully created virtual environment! 
+Virtualenv location: /home/cloud_user/.local/share/virtualenvs/hr-3BGsCzQa
+Creating a Pipfile for this project…
 
 
