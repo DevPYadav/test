@@ -256,7 +256,8 @@ Slash\Character
 >>> list_name[0:3] = [1, 2, 3, 4] (changes 1st - 4th values to 1, 2, 3, 4)
 
 * Creating a python virtual environment
-pipenv --python python3.7
+
+'>>> pipenv --python python3.7
 Creating a virtualenv for this project…
 Pipfile: /home/cloud_user/hr/Pipfile
 Using /usr/local/bin/python3.7 (3.7.2) to create virtualenv…
@@ -271,4 +272,8 @@ done.
 Virtualenv location: /home/cloud_user/.local/share/virtualenvs/hr-3BGsCzQa
 Creating a Pipfile for this project…
 
+* Activating the virtual environment
+'>>> pipenv shell
+Launching subshell in virtual environment…
+[cloud_user@ip-10-0-1-54 hr]$  . /home/cloud_user/.local/share/virtualenvs/hr-3BGsCzQa/bin/activate
 
