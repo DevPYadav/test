@@ -40,7 +40,38 @@ expat-devel
 - ./configure --enable-optimizations
 - make altinstall
 
+* Installing python on Ubuntu
+$ sudo -i
+$ apt update -y
+$ apt install -y \
+wget \
+build-essential \
+libffi-dev \
+libgdbm-dev \
+libc6-dev \
+libssl-dev \
+zlib1g-dev \
+libbz2-dev \
+libreadline-dev \
+libsqlite3-dev \
+libncurses5-dev \
+libncursesw5-dev \
+xz-utils \
+tk-dev
+
+$ cd /usr/src
+$ wget http://python.org/ftp/python/3.7.2/Python-3.7.2.tar.xz
+$ tar xf Python-3.7.2.tar.xz
+$ cd Python-3.7.2
+$ ./configure --enable-optimizations
+$ make altinstall
+pip3.7 install --upgrade pip
+
+
 # Programming tips
+* Setting up python interpreter 
+'#!/usr/bin/env python3.7
+
 * __init__ method - This method overrides the initializer of the class. The initializer is what is used when we create a new version of a class.
 * 'with' example
 with open('xmen.txt', 'w+') as my_file:
@@ -134,8 +165,10 @@ The file argument is pretty simple, but the mode argument has a variety of optio
 '+' - Opens the file for reading and writing
 
 * Comments in python
-' # - One line of comment
-""" [block of comment] ""
+' # This is a comment
+"""
+Multi-line comment (not a comment, it is a multi line string)
+"""
 
 * Stepping
 Values based on position in. a list
@@ -157,3 +190,60 @@ my_list[::-1] - prints the list in reverse.
 3.0
 >>> z
 4.0
+
+* higher order function
+A function that receives a function argument and/or returns a function
+
+* While example
+>>> count = 1
+>>> while count <= 4:
+...     print("looping")
+...     count += 1
+
+* find
+>>> "single".find('g')
+3
+
+* exponents ** or pow()
+
+* '\'
+--- used when we need to use qoutes or characters in a string
+>>> print("Tab\tDelimited")
+Tab Delimited
+>>> print("New\nLine")
+New
+Line
+>>> print("Slash\\Character")
+Slash\Character
+>>> print("'Single' in Double")
+'Single' in Double
+>>> print('"Double" in Single')
+"Double" in Single
+>>> print("\"Double\" in Double")
+"Double" in Double
+
+* Testing Odd (1) and Even(0)
+>>> 5 % 2
+1
+>>> 4%2
+0
+
+* % module division (remainder)
+5 % 3
+2
+
+* // floor division
+>>> 5 // 3
+1
+
+* List functions
+1. Utilizing list as a queue 
+>>> list_name.pop(0) (returns the first item in the list and removes that item from the list)
+2. Creating a list
+>>> list_name = [item1, item2, item3, item4]
+3. Adding an item to a list at a specified location
+>>> list_name.insert(0,1) (inserts value of 1 to first position (position zero) in the list)
+4. 
+
+
+
