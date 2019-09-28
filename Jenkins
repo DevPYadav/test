@@ -1,4 +1,4 @@
-# Installing jenkins - 
+# Installing jenkins
 
 * $which wget
 * $sudo su # this prevents us from having to issue sudo each time.  
@@ -10,29 +10,27 @@ or
 * $sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo 
 
 # Import the jenkins key
-$sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+* $sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
 or
-sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key 
+* sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key 
 
-$yum update 
-$yum install jenkins  java-1.8.0-openjdk-devel git -y 
+* $yum update 
+* $yum install jenkins  java-1.8.0-openjdk-devel git -y 
 or
-yum install jenkins
-yum install java-1.8.0-openjdk
+* $yum install jenkins
+* $yum install java-1.8.0-openjdk
 
---- Starting Jenkins
-$systemctl enable jenkins
-$systemctl start jenkins
-$systemctl status jenkins
+## Starting Jenkins
+* $systemctl enable jenkins
+* $systemctl start jenkins
+* $systemctl status jenkins
 
---- For logging into Jenkins server 
-http://devpyadav6c.mylabserver.com:8080/
-Jenkins user/passwd - cloud_user/*sana1@345
+##For logging into Jenkins server 
+* http://devpyadav6c.mylabserver.com:8080/
+* Jenkins user/passwd - cloud_user/*sana1@345
 
--- Get the sudo password 
-$ cat /var/lib/jenkins/secrets/initialAdminPassword
-
-
+## Get the sudo password 
+* $ cat /var/lib/jenkins/secrets/initialAdminPassword
 -----------------------------------------------------------------------------------
 
 For installing jenkins, go to the below url and follow the instructions:
