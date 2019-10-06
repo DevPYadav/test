@@ -3,4 +3,4 @@ echo "this scipt is from github"
 NUMBER=$(($NUMBERONE + $NUMBERTWO))
 echo "$NUMBER"
 echo "this is complete"
-echo "this was run automatically always"
+echo "this was run automatically always 123"
