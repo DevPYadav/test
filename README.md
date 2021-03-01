@@ -1,33 +1,10 @@
-# Git Configurations
-* System - Applies to all users
-Program Files\Git\etc\gitconfig
-* User - Applies to single user
-~Home\.gitconfig
-* Project
-my_project/.git/config
+<<<<<<< HEAD
+# Hello Node
+This is a very basic Hello World application written with Node.
 
-# Initial Git Configuration Commands:
+It includes a `Dockerfile` for building a Docker image with the application, and a `Jenkinsfile` that defines a build pipeline for it.
 
-* $ git config --global user.name "Dev P. Yadav"
-
-* $ git config --global user.email "devpyadav@gmail.com"
-
-* Initializing a new repository locally
-
-  *$ git init*
-
-* Whether git is installed or not
-
-  *$ which git*
-
-* Which version of git is installed
-
-  *$ git --version*
-
-# Basic Commands:
-
-
-
-
-
-
+https://getintodevops.com
+=======
+# devops-tutorial
+>>>>>>> ce3c95b92d0a737f7f47667c31aafe18343361c6
