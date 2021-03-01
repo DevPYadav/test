@@ -225,11 +225,17 @@ On branch master assumed as prod
 
 # Working with the Remote Server
 
+## SSH key generation to connect to github
+*$ ssh-keygen 
+* Add this key to the github repository under the keys section
+ 
 ## Git Remote
 
 Remote locations are generally a build server, a team members machine or a centralised store such as Github.com. Remotes are added using the git remote command with a friendly name and the remote location, typically a HTTPS URL or a SSH connection for example https://github.com/OcelotUproar/ocelite.git or git@github.com:/OcelotUproar/ocelite.git.
 
 The friendly name allows you to refer to the location in other commands. Your local repository can reference multiple different remote repositories depending on your scenario.
+
+
 
   *$ git remote add origin /s/remote-project/1*
 
