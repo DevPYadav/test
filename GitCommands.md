@@ -7,11 +7,11 @@
 ** my_project/.git/config
 
 # How Git works
-* Saving to Local Repo and pushing to Remote Repo *
+* Saving to Local Repo and pushing to Remote Repo
 
-**Local:** Working directory (Git Add) ---> Staging area (Git Commit) ---> Commited to Local Repo
+**Local:** Working directory (_git add_) ---> Staging area (_git commit_) ---> Commited to Local Repo
 
-**Remote:** Local Repo (Git Push) ---> Pushed to Remote Repo
+**Remote:** Local Repo (_git push_) ---> Pushed to Remote Repo
 
 # Initial Git Configuration Commands:
 
