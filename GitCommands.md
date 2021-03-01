@@ -8,7 +8,9 @@
 
 # How Git works
 * Saving to Local Repo and pushing to Remote Repo *
+
 **Local:** Working directory (Git Add) ---> Staging area (Git Commit) ---> Commited to Local Repo
+
 **Remote:** Local Repo (Git Push) ---> Pushed to Remote Repo
 
 # Initial Git Configuration Commands:
