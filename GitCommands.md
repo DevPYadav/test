@@ -1,3 +1,8 @@
+* Main git website - http://git-scm.com
+* Distributed Version Control
+* There is no Central repository
+* Bash is an environment in Unix, GitBash is a similar environment for windows
+
 # Git Configurations
 * System - Applies to all users
 ** Program Files\Git\etc\gitconfig
@@ -5,6 +10,7 @@
 ** ~Home\.gitconfig
 * Project
 ** my_project/.git/config
+
 
 # How Git works
 * Saving to Local Repo and pushing to Remote Repo
@@ -20,6 +26,8 @@
 **Local:** Local Repo (_git checkout_) --> Working directory
 
 # Initial Git Configuration Commands:
+
+* $ yum install git
 
 * $ git config --global user.name "Dev P. Yadav"
 
