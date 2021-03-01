@@ -1,11 +1,14 @@
 # Git Configurations
 * System - Applies to all users
-Program Files\Git\etc\gitconfig
+** Program Files\Git\etc\gitconfig
 * User - Applies to single user
-~Home\.gitconfig
+** ~Home\.gitconfig
 * Project
-my_project/.git/config
+** my_project/.git/config
 
+# How Git works
+**Local**                                                                                                       **Remote**
+Working directory (Git Add) ---> Staging area (Git Commit) ---> Local Repo
 # Initial Git Configuration Commands:
 
 * $ git config --global user.name "Dev P. Yadav"
