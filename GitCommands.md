@@ -13,6 +13,12 @@
 
 **Remote:** Local Repo (_git push_) ---> Pushed to Remote Repo
 
+* Pull from  Remote Repo
+
+**Remote:** Remote Repo (_git pull_) --> Local Repo
+
+**Local:** Local Repo (_git checkout_) --> Working directory
+
 # Initial Git Configuration Commands:
 
 * $ git config --global user.name "Dev P. Yadav"
