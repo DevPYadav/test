@@ -32,10 +32,12 @@ node {
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
         /* docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') { */
-        sh 'echo "Before docker registry"'
+
+        sh 'echo "Before docker registry111"'
         docker.withRegistry('https://registry.hub.docker.com/repository/docker/devpyadav', 'docker-hub-credentials') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
+        sh 'echo "After docker registry"'        
     }
 }
