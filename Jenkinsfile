@@ -44,6 +44,7 @@ node {
                         dockerImage.push() 
                     }
                 } 
+            }
         }
         sh 'echo "After docker registry"'        
     }
