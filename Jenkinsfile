@@ -13,7 +13,7 @@ node {
         
         
         sh ' echo $(whoami)'
-        app = docker.build("devops")
+        app = docker.build("/repository/docker/devpyadav/devops")
         sh 'echo "Build passed"'
     }
 
