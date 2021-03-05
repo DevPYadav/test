@@ -13,6 +13,7 @@ node {
         
         
         sh ' echo $(whoami)'
+        sh 'sudo usermod -a -G docker'
         app = docker.build("devops")
     }
 
