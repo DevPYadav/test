@@ -13,6 +13,7 @@ node {
         
         
         sh '$whoami'
+        sh 'echo "After whoami"'
         app = docker.build("devops")
     }
 
