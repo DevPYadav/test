@@ -11,8 +11,8 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
         
-        #!/bin/bash
-        $whoami
+        
+        sh '$whoami'
         app = docker.build("devops")
     }
 
