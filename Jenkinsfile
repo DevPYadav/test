@@ -12,8 +12,7 @@ node {
          * docker build on the command line */
         
         
-        sh whoami
-        sh 'echo "After whoami"'
+        sh ' echo $(whoami)'
         app = docker.build("devops")
     }
 
