@@ -13,7 +13,6 @@ node {
         
         
         sh ' echo $(whoami)'
-        sh 'sudo usermod -a -G docker jenkins'
         app = docker.build("devops")
         sh 'echo "Build passed"'
     }
