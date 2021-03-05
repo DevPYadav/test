@@ -34,7 +34,8 @@ node {
         /* docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') { */
 
         sh 'echo "Before docker registry111"'
-        docker.withRegistry('https://registry.hub.docker.com//repository//docker//devpyadav/devops', 'docker-hub-credentials') {
+        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') { 
+        /* docker.withRegistry('https:/registry.hub.docker.com/repository/docker/devpyadav/devops', 'docker-hub-credentials') { */
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
