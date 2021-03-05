@@ -34,17 +34,10 @@ node {
         /* docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') { */
 
         sh 'echo "Before docker registry111"'
-       /* docker.withRegistry('https://registry.hub.docker.com/repository/docker/devpyadav', 'docker-hub-credentials') {
+       /* docker.withRegistry('https://registry.hub.docker.com/repository/docker/devpyadav', 'docker-hub-credentials') { */
+          docker.withRegistry('', 'docker-hub-credentials') {
             app.push("${env.BUILD_NUMBER}")
-            app.push("latest") */
-            
-            steps { 
-                script { 
-                    docker.withRegistry( '', 'docker-hub-credentials' ) { 
-                        dockerImage.push() 
-                    }
-                } 
-            }
+            app.push("latest")
         }
         sh 'echo "After docker registry"'        
    
