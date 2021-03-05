@@ -47,5 +47,5 @@ node {
             }
         }
         sh 'echo "After docker registry"'        
-    }
+   
 }
